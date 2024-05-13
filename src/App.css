@@ -1,7 +1,4 @@
-#root {
-  text-align: center;
-  margin: 0 auto;
-  }
+
   
   .main{
     max-width: 1500px;
@@ -49,12 +46,13 @@
     color: white;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    margin-top: 2rem;
     }
 
   /* Podria usar grid para manejar las columnas y que quede responsive*/
   .layout-flex{ 
     display: grid;
-    grid-template-rows: 100px 10fr 50px;
+    grid-template-rows: 400px 10fr 50px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "aside"
@@ -64,13 +62,13 @@
 
   @media (min-width: 768px) {
    .layout-flex{
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: none;
     grid-template-areas: 
-    "aside main main main"
-    "aside main main main"
-    "aside main main main"
-    "footer footer footer footer";
+    "aside main main main main"
+    "aside main main main main"
+    "aside main main main main"
+    "footer footer footer footer footer";
    }   
   }
 
@@ -87,6 +85,7 @@
   .input-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: white;
     gap: 1rem;
     background-color: #eb3c46;
@@ -99,10 +98,16 @@
     border: none;
     border-radius: 5px;
     text-align: center;
+    padding: 5px;
   }
 
   .main{
     grid-area: main;
+  }
+
+  .table-container{
+    display: flex;
+    margin: 100px;
   }
 
   .footer{

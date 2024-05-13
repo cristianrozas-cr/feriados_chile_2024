@@ -33,7 +33,9 @@ function App() {
         </div>
       </div>
       <div className='main'>
+        <div className='table-container'>
         <MiApi search={search}/>
+        </div>
       </div>
       <footer className='footer'>
         Derechos reservados

@@ -40,24 +40,27 @@ function MiApi({search}){
       }
     </div> */}
 
-    <div className="cards-container">
-        {
-        feriadosFiltrados.map((feriado, id) =>
-        <div className="cards">
-          <Card id={id} style={{ width: '18rem' }} bg="primary-subtle">
-          <Card.Img variant="top" src={feriado.image} />
-          <Card.Body>
-            <Card.Title>{id + 1} - {feriado.title}</Card.Title>
-          </Card.Body>
-          <ListGroup className="list-group-flush">
-            <ListGroup.Item>Fecha: {feriado.date}</ListGroup.Item>
-            <ListGroup.Item>{feriado.type}</ListGroup.Item>
-          </ListGroup>
-        </Card>
-      </div>
-        )
-        }
-    </div>
+    <Table striped bordered hover>
+    <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Título</th>
+          <th>Tipo</th>
+          <th>Detalle</th>
+        </tr>
+      </thead>
+      {feriadosFiltrados.map((feriado, id) =>
+            <tbody>
+            <tr>
+              <td>{feriado.date}</td>
+              <td>{feriado.title}</td>
+              <td>{feriado.type}</td>
+              <td>{feriado.extra}</td>
+            </tr>
+          </tbody>
+
+      )}
+    </Table>
 
 
 
